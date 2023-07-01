@@ -7,7 +7,7 @@ mod gst_pipeline;
 struct StreamRequest {
     input_url: String,
     output_urls: Vec<String>,
-    loopTimes: u32,
+    loopTimes: u128 ,
 
 }
 
