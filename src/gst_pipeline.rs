@@ -31,12 +31,7 @@ pub fn streaming_pipeline(input_url: &str, output_urls: &[String]) {
         .expect("Cloud not create sink element queue");      
     let videosink = gst::ElementFactory::make("rtmpsink", Some("rtmpsink"))
         .expect("Cloud not create sink element rtmpsink");   
-	let videosink1 = gst::ElementFactory::make("rtmpsink", Some("rtmpsink1"))
-        .expect("Cloud not create sink element rtmpsink"); 
-	let videosink2 = gst::ElementFactory::make("rtmpsink", Some("rtmpsink2"))
-        .expect("Cloud not create sink element rtmpsink"); 
-    let muxer = gst::ElementFactory::make("flvmux", Some("muxer"))
-        .expect("Failed to create flvmux element");
+	
 	    
     flvmux.set_property("streamable", true);
     source.set_property("uri", &uri);
